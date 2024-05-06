@@ -4,6 +4,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const StyledHero = styled("div")(({ theme }) => ({
@@ -11,12 +12,14 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
-    [theme.breakpoints.up('xs')]: { // <= mobile
-        paddingTop: "100px"
+    [theme.breakpoints.up("xs")]: {
+      // <= mobile
+      paddingTop: "100px",
     },
-    [theme.breakpoints.up('md')]: { // >=mobile
-        paddingTop: "0",
-    }
+    [theme.breakpoints.up("md")]: {
+      // >=mobile
+      paddingTop: "0",
+    },
   }));
 
   const StyledImage = styled("img")(({ theme }) => ({
@@ -54,14 +57,19 @@ const Hero = () => {
                 variant="h2"
                 textAlign="center"
               >
-                I'm a Software Engineer
+                <Typewriter
+                  words={["I'm a Software Engineer"]}
+                  loop={1}
+                  cursor
+                />
               </Typography>
+
               <Grid
                 container
                 display="flex"
                 justifyContent="center"
                 spacing={3}
-                pt={3}
+                pt={15}
               >
                 <Grid
                   item
@@ -70,7 +78,7 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <StyledButton>
+                  <StyledButton onClick={() => console.log("download")}>
                     <DownloadIcon />
                     <Typography>Download CV</Typography>
                   </StyledButton>
@@ -82,7 +90,7 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <StyledButton>
+                  <StyledButton onClick={() => console.log("contact")}>
                     <MailOutlineIcon />
                     <Typography>Contact me</Typography>
                   </StyledButton>
