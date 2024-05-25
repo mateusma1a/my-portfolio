@@ -5,6 +5,8 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 import { Typewriter } from "react-simple-typewriter";
+import { useState } from "react";
+import CustomizedDialog from "../../../../components/CustomizedDialog/CustomizedDialog";
 
 const Hero = () => {
   const StyledHero = styled("div")(({ theme }) => ({
@@ -28,6 +30,17 @@ const Hero = () => {
     border: `1px solid ${theme.palette.primary.contrastText}`,
   }));
 
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  
+  
   return (
     <>
       <StyledHero>
@@ -69,7 +82,8 @@ const Hero = () => {
                 display="flex"
                 justifyContent="center"
                 spacing={3}
-                pt={15}
+                pt={3}
+                pb={3}
               >
                 <Grid
                   item
@@ -90,7 +104,7 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <StyledButton onClick={() => console.log("contact")}>
+                  <StyledButton onClick={handleClickOpen}>
                     <MailOutlineIcon />
                     <Typography>Contact me</Typography>
                   </StyledButton>
@@ -100,6 +114,8 @@ const Hero = () => {
           </Grid>
         </Container>
       </StyledHero>
+
+      <CustomizedDialog open={open} handleClose={handleClose} />
     </>
   );
 };
