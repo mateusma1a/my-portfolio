@@ -15,7 +15,7 @@ import { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)(() => ({
   display: "flex",
-  justifyContent: "space-evenly",
+  justifyContent: "space-evenly"
 }));
 
 const pages = [
@@ -49,7 +49,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <AppBar position="absolute">
+      <AppBar position="fixed">
         <StyledToolbar>
           {isMobile ? (
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

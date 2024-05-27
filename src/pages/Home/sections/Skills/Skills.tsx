@@ -19,19 +19,10 @@ import { MdCss } from "react-icons/md";
 
 const StyledSkills = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.primary.light,
-  height: "75vh",
+  height: "100%",
   display: "flex",
   alignItems: "center",
-  [theme.breakpoints.up("xs")]: {
-    // <= mobile
-    height: "110vh",
-    paddingTop: "120px",
-    paddingBottom: "100px",
-  },
-  [theme.breakpoints.up("md")]: {
-    // >=mobile
-    paddingTop: "0",
-  },
+  paddingTop: "60px",
 }));
 
 const Skills = () => {

@@ -1,4 +1,5 @@
 import NavBar from "../../components/NavBar/NavBar";
+import StyledScrollTopButton from "../../components/ScrollTopButton/ScrollTopButton";
 import About from "./sections/About/About";
 import Experience from "./sections/Experience/Experience";
 import Formation from "./sections/Formation/Formation";
@@ -10,12 +11,16 @@ const Home = () => {
   return (
     <>
       <NavBar />
+
+      <StyledScrollTopButton />
+
       <Hero />
       <About />
       <Skills />
       <Formation />
       <Experience />
       <Projects />
+      
     </>
   );
 };

@@ -2,17 +2,11 @@ import { Container, Typography, styled } from "@mui/material";
 
 const StyledProjects = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.primary.dark,
-  height: "100vh",
+  height: "100%",
   display: "flex",
   alignItems: "center",
-  [theme.breakpoints.up("xs")]: {
-    // <= mobile
-    paddingTop: "100px",
-  },
-  [theme.breakpoints.up("md")]: {
-    // >=mobile
-    paddingTop: "0",
-  },
+  paddingTop: "60px",
+  paddingBottom: "15px"
 }));
 
 const Projects = () => {

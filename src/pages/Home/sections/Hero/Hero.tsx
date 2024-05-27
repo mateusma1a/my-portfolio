@@ -17,6 +17,7 @@ const Hero = () => {
     [theme.breakpoints.up("xs")]: {
       // <= mobile
       paddingTop: "100px",
+      paddingBottom: "15px",
     },
     [theme.breakpoints.up("md")]: {
       // >=mobile
@@ -94,7 +95,7 @@ const Hero = () => {
                 >
                   <StyledButton onClick={() => console.log("download")}>
                     <DownloadIcon />
-                    <Typography>Download CV</Typography>
+                    <Typography>Resume</Typography>
                   </StyledButton>
                 </Grid>
                 <Grid

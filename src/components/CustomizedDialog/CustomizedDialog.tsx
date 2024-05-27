@@ -76,7 +76,7 @@ const CustomizedDialog: React.FC<ChildProps> = ({ open, handleClose }) => {
               style={{ color: "primary.contrastText", marginRight: 8 }}
             />
             <Link href={linkedIn} target="_blank" rel="noopener noreferrer">
-              {linkedIn}
+              LinkedIn Profile
             </Link>
           </Box>
         </DialogContent>
